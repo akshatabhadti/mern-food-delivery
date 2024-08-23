@@ -19,7 +19,7 @@ export default function RegisterPage() {
   useEffect(() => {
     if (!user) return;
     returnUrl ? navigate(returnUrl) : navigate('/');
-  }, [user]);
+  }, [user, navigate, returnUrl]); // Include navigate and returnUrl as dependencies
 
   const {
     handleSubmit,
